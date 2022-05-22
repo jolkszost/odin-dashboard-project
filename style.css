@@ -1,0 +1,70 @@
+.container {
+    display: grid;
+    grid-template-columns: 300px 1200px;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar cont"
+    "sidebar cont"
+    "sidebar cont"
+    "sidebar cont";
+}
+
+.header {
+    background-color: antiquewhite;
+    box-shadow: -4px 0px 4px inset;
+    display: grid;
+    grid-template-columns: 800px 400px;
+    grid-area: header;
+    padding: 1rem;
+}
+
+.dashboard {
+    font-size: 35px;
+}
+
+
+
+
+.sidebar {
+    background-color: blue;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 75px 225px;
+    gap: 1rem;
+    color: whitesmoke;
+    grid-area: sidebar;
+}
+
+.content {
+    background-color: bisque;
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 1rem;
+}
+
+#cardCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 1rem;
+}
+
+.card {
+    background-color: gray;
+    padding: 2rem;
+}
+
+#announce {
+    background-color: lightgray;
+    padding: 1rem;
+}
+.announcement {
+    border-bottom: .5px solid grey;
+}
+
+#trending {
+    background-color: lightgray;
+    padding: 1rem;
+}
