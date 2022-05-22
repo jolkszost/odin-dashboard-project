@@ -1,4 +1,7 @@
-.container {
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container {
     display: grid;
     grid-template-columns: 300px 1200px;
     grid-template-areas: 
@@ -9,13 +12,72 @@
     "sidebar cont";
 }
 
-.header {
-    background-color: antiquewhite;
-    box-shadow: -4px 0px 4px inset;
+#header {
+    background-color: white;
+    
     display: grid;
-    grid-template-columns: 800px 400px;
+    grid-template-columns: 2fr 1fr;
     grid-area: header;
     padding: 1rem;
+    border-bottom: 2px solid #8080806b;
+}
+#searchArea {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+   
+    
+}
+
+#lens {
+   
+}
+
+#search {
+    border-radius: 10px;
+    width: 60%;
+    background-color: rgb(226 232 240);
+
+}
+
+#notifArea {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+#userButtonArea {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+button {
+    width: 100px;
+    border-radius: 15px;
+    background-color: rgb(25 146 212);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+#sidebar {
+    background-color:rgb(25 146 212);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 75px 225px;
+    gap: 1rem;
+    color: whitesmoke;
+    grid-area: sidebar;
+    font-size: 20px;
 }
 
 .dashboard {
@@ -24,24 +86,18 @@
 
 
 
-
-.sidebar {
-    background-color: blue;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 75px 225px;
-    gap: 1rem;
-    color: whitesmoke;
-    grid-area: sidebar;
-}
-
-.content {
-    background-color: bisque;
+#content {
+    background-color: rgb(226 232 240);
     grid-area: cont;
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
     padding: 1rem;
+}
+
+.contHead {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #cardCont {
@@ -52,19 +108,41 @@
 }
 
 .card {
-    background-color: gray;
+    background-color: white;
+    border-left: 10px solid #ffb01fd1;
     padding: 2rem;
+    border-radius: 8px;
+}
+
+.prjHead {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 #announce {
-    background-color: lightgray;
+    background-color: white;
     padding: 1rem;
+    border-radius: 8px;
+}
+
+#announce :last-child {
+    border-bottom: none;
 }
 .announcement {
     border-bottom: .5px solid grey;
 }
 
+.annHead {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.annText, .prjText, .trendTitle {
+    color: rgb(63, 62, 62);
+}
+
 #trending {
-    background-color: lightgray;
+    background-color: white;
     padding: 1rem;
+    border-radius: 8px;
 }
