@@ -1,6 +1,12 @@
 * {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
 #container {
     display: grid;
     grid-template-columns: 300px 1200px;
@@ -24,18 +30,58 @@
 #searchArea {
     padding: 1rem;
     display: flex;
+    align-items: center;
     gap: 1rem;
    
     
 }
 
-#lens {
-   
+#userArea {
+    display:grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "bigCat greet"
+    "bigCat uHand" ;
+
+}
+
+.greeting {
+    grid-area: greet;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.userHandle {
+    grid-area: uHand;
+    font-size: 18px;
+    font-weight: bold;
+}
+#bigCat {
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   grid-area: bigCat;
+}
+
+#lilCat {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    grid-area: lilCat;
+}
+
+#logoCat {
+    height: 70px;
+    width: 70px;
+    border-radius: 25%;
+    align-self: center;
 }
 
 #search {
     border-radius: 10px;
     width: 60%;
+    height: 25px;
     background-color: rgb(226 232 240);
 
 }
@@ -43,9 +89,16 @@
 #notifArea {
     padding: 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     justify-content: flex-end;
+    align-items: center;
 }
+
+#name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
 
 #userButtonArea {
     display: flex;
@@ -55,8 +108,10 @@
 
 
 button {
-    width: 100px;
+    width: 120px;
+    height: 35px;
     border-radius: 15px;
+    border: none;
     background-color: rgb(25 146 212);
     color: white;
     font-weight: bold;
@@ -78,10 +133,16 @@ button {
     color: whitesmoke;
     grid-area: sidebar;
     font-size: 20px;
+    font-weight: bold;
+}
+
+#sidebar span {
+    justify-self: flex-end;
 }
 
 .dashboard {
-    font-size: 35px;
+    font-size: 25px;
+    align-self: center;
 }
 
 
@@ -119,6 +180,22 @@ button {
     font-weight: bold;
 }
 
+.prjButtons {
+    display: flex;
+    justify-content:flex-end;
+
+    
+}
+
+.prjButtons > span {
+    padding: .75rem;
+   
+}
+
+#otherContent {
+    padding: 15px;
+}
+
 #announce {
     background-color: white;
     padding: 1rem;
@@ -135,6 +212,7 @@ button {
 .annHead {
     font-size: 14px;
     font-weight: bold;
+    padding-bottom: 1rem;
 }
 
 .annText, .prjText, .trendTitle {
@@ -145,4 +223,45 @@ button {
     background-color: white;
     padding: 1rem;
     border-radius: 8px;
+    height: 250px;
+
+    
+}
+
+.trendPerson {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "lilCat tName";
+    
+}
+
+.trendName {
+    grid-area: tName;
+    display: grid;
+    padding: .35rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "tHandle"
+    "tTitle";
+
+}
+
+.trendTitle {
+    grid-area: tTitle;
+    font-size: 13px;
+    
+}
+
+.trendHandle {
+    grid-area: tHandle;
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+
+.trendPerson > img {
+    align-self: center;
 }
